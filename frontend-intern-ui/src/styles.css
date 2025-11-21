@@ -1,0 +1,306 @@
+/* src/styles.css */
+
+/* Global Reset and Body Styling */
+body {
+    font-family: 'Inter', sans-serif; /* A more modern font */
+    background-color: #eef2f6; /* Lighter, subtle background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+.App {
+    width: 90%; /* Max width for smaller screens */
+    max-width: 600px; /* Max width for larger screens */
+    margin: 20px auto; /* Adjust margin for overall centering */
+    padding: 30px; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
+    text-align: center;
+    border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+h1 {
+    font-size: 2.2em; /* Larger title */
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db; /* Thicker, more prominent line */
+    padding-bottom: 15px;
+    margin-bottom: 40px; /* More space below title */
+    font-weight: 700; /* Bolder font */
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #cfd8dc; /* Lighter separator */
+    padding-bottom: 10px;
+}
+
+/* --- Form and Input Styling --- */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: calc(100% - 24px); /* Full width with padding */
+    padding: 12px; /* Increased padding */
+    margin: 10px 0; /* More vertical space */
+    border: 1px solid #ced4da; /* Subtle border */
+    border-radius: 8px; /* More rounded inputs */
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #3498db; /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25); /* Focus ring */
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px; /* More generous padding */
+    margin: 8px 5px; /* Adjusted margin */
+    border: none;
+    border-radius: 8px; /* More rounded buttons */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600; /* Bolder text */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary Button (e.g., Delete, Logout) */
+button[style*="background-color: red"],
+button[style*="background-color: rgb(231, 76, 60)"] { /* Specificity for red */
+    background-color: #e74c3c;
+}
+button[style*="background-color: red"]:hover,
+button[style*="background-color: rgb(231, 76, 60)"]:hover {
+    background-color: #c0392b;
+}
+
+/* --- Auth Form Layout --- */
+.auth-container {
+    padding: 25px; /* More padding */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-top: 30px; /* Adjusted top margin */
+    background-color: #fcfcfc; /* Slightly off-white background */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Inner shadow for depth */
+}
+.auth-container h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    color: #34495e;
+    border-bottom: none; /* Remove line under auth title */
+    padding-bottom: 0;
+}
+
+
+/* --- Dashboard Styling --- */
+.dashboard-header {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.dashboard-header h2 {
+    margin: 0;
+    flex-grow: 1; /* Allows title to take available space */
+    text-align: left;
+    font-size: 1.7em;
+    padding-right: 15px; /* Space between title and button */
+}
+.dashboard-header button {
+    margin-left: auto; /* Push logout button to the right */
+    background-color: #6c757d; /* Muted logout button */
+}
+.dashboard-header button:hover {
+    background-color: #5a6268;
+}
+
+
+.task-form-container {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.task-form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+.task-form-container input {
+    flex-grow: 1; /* Input takes up available space */
+    width: auto; /* Override specific width */
+    min-width: 180px; /* Ensure input is not too small */
+    margin: 0; /* Remove default margin */
+}
+.task-form-container button {
+    margin: 0; /* Remove default margin */
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+
+/* --- Task List Styling --- */
+.task-list {
+    margin-top: 30px;
+}
+.task-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* More padding */
+    margin-bottom: 10px; /* More space between items */
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 6px solid #3498db; /* Thicker accent bar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+    transition: transform 0.2s ease;
+}
+
+.task-list li:hover {
+    transform: translateY(-2px); /* Subtle hover lift */
+}
+
+.task-list li span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1.1em;
+    color: #495057;
+    word-break: break-word; /* Prevent long words from overflowing */
+    margin-right: 15px; /* Space before buttons */
+}
+.task-list li span[style*="line-through"] {
+    color: #90a4ae; /* Muted color for completed tasks */
+}
+
+.task-list li div {
+    display: flex; /* Group buttons together */
+    gap: 8px; /* Space between buttons */
+    margin-left: auto; /* Push buttons to the right */
+}
+
+.task-list li button {
+    margin: 0; /* Remove default margin */
+    padding: 8px 12px; /* Adjust button size */
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+/* Messages */
+.message {
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+    border: 1px solid transparent; /* Default border */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .App {
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .dashboard-header h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding-right: 0;
+    }
+    .dashboard-header button {
+        margin-left: 0;
+        width: 100%; /* Full width button */
+    }
+    .task-form-container form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .task-form-container input,
+    .task-form-container button {
+        width: 100%;
+        min-width: unset;
+    }
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .task-list li span {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .task-list li div {
+        width: 100%;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    .task-list li button {
+        flex-grow: 1; /* Buttons share space */
+    }
+}

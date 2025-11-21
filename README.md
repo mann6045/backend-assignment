@@ -108,8 +108,6 @@ The frontend UI automatically uses these endpoints, but they are also available 
 
 ## 📈 Scalability Note
 
-*(Note: The `SCALABILITY_NOTE.md` file contains the detailed discussion, but this is a brief summary.)*
-
 To handle future high traffic and growth, the architecture is designed for readiness in several key areas:
 
 1.  **Microservices:** The modular structure (Auth, Task Controllers) is primed for decomposition into independent microservices.
